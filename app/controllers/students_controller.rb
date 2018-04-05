@@ -3,7 +3,7 @@ class StudentsController < ApplicationController
     @student = Student.new
   end
   def create
-    @student = Student.new(params[:student])
+    @student = Student.new(params.require(:student).permit())
     @student.save
     redirect_to student_path(@student)
   end
