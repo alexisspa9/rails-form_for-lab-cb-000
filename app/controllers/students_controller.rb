@@ -1,1 +1,3 @@
 class StudentsController < ApplicationController
+
+end
